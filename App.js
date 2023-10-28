@@ -4,8 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/Home';
 import Signup from './src/Signup';
 //import Login from './src/Login';
-import PreList from './src/PreList';
-
+import PresList from './src/PresList';
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Signup" component={Signup} />
-        <Stack.Screen name="PreList" component={PreList} />
+        <Stack.Screen name="PresList" component={PresList} />
       </Stack.Navigator>
     </NavigationContainer>
   );
