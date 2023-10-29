@@ -37,14 +37,10 @@ const Details = () => {
                             
                             <TouchableOpacity onPress={navigateToTargetScreen}>
                             <Image
-        source={require("../assets/Capsule.png")}
-        style={{ width: 30, height: 30}}
+        source={require("../assets/med1.jpg")}
+        style={{ width: 80, height: 90}}
       />
      </TouchableOpacity>
-                        <Image
-        source={require("../assets/Capsule.png")}
-        style={{ width: 30, height: 30}}
-      />
      
                             </Text>
                         </View>     
