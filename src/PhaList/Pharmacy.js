@@ -23,7 +23,7 @@ const Pharmacy = () => {
       return (
         <View style={styles.container}>
           <Text style={{ color: 'white', fontSize: 20, marginBottom: 40 }}>Pharmacies List</Text>
-            {   
+            {  
                 people.map((item) => {
                     return(
                         <View key={item.key}>  
@@ -36,7 +36,7 @@ const Pharmacy = () => {
      </TouchableOpacity>
      <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> ____________________________________</Text>
      <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> Sahana Suwa Pharmacy               </Text>
-     <Text style={{ color: 'black', fontSize: 12 }}>    Email: sahana@gmail.com  | Phone: +94 77 564 7389</Text>
+     <Text style={{ color: 'black', fontSize: 12 }}>    Email: sahana@gmail.com  | Phone: +94 11 564 7389</Text>
      <Text style={{ color: 'green', fontSize: 12 }}> Opened                                      </Text>
      <Image
         source={require("../assets/rating.png")}
@@ -46,18 +46,22 @@ const Pharmacy = () => {
                         </View>     
                     )
                     })}
-
 {   
                 people.map((item) => {
+            
                     return(
                         <View key={item.key}>  
                             <Text style= {styles.item}>
-                            <TouchableOpacity onPress={navigateToTargetScreen}>
+                                   <TouchableOpacity onPress={navigateToTargetScreen}> 
                             <Image
         source={require("../assets/p1.png")}
         style={{ width: 100, height: 100}}
+        
       />
+
+      
      </TouchableOpacity>
+  
      <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> ____________________________________</Text>
      <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> Osulka Pharmacy Pharmacy               </Text>
      <Text style={{ color: 'black', fontSize: 12 }}>   Email: osulka@gmail.com  | Phone: +94 76 234 7349   </Text>
