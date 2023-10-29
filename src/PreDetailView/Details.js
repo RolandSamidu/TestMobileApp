@@ -7,9 +7,9 @@ import { useNavigation } from '@react-navigation/native';
 const Details = () => {
 
       const [people, setPeople] = useState([
-        { name:'Dogastrol 40mg \n', key: '1' },
-        { name:' Menison 50mg\n', key: '2' },
-        { name:' Dorithricin 100mg\n ', key: '3' },
+        { name:'     Dogastrol   40mg \n\t  ', key: '1' },
+        { name:'   Menison   50mg\n\t', key: '2' },
+        { name:'    Dorithricin   100mg\n\t ', key: '3' },
        
         
       ]);
@@ -25,7 +25,7 @@ const Details = () => {
     
       return (
         <View style={styles.container}>
-          <Text style={{ color: 'white', fontSize: 20, marginBottom: 40 }}>Medicines Lists</Text>
+          <Text style={{ color: 'white', fontSize: 20, marginBottom: 40 }}>Medicines List</Text>
             {   
                 people.map((item) => {
                     return(
@@ -33,15 +33,16 @@ const Details = () => {
                             <Text style= {styles.item}>
                             
                             {item.name}
-                            <Text style={{ color: 'black', fontSize: 11, fontStyle:"normal"}}> Morning 1  | Afternoon 1 | Eveniing 1                  </Text>
+                            <Text style={{ color: 'black', fontSize: 11, fontStyle:"italic"}}>Morning 1  | Afternoon 1 | Eveniing 1                  </Text>
                             
                             <TouchableOpacity onPress={navigateToTargetScreen}>
                             <Image
-        source={require("../assets/med1.jpg")}
-        style={{ width: 80, height: 90}}
+        source={require("../assets/med1.png")}
+        style={{ width: 100, height: 100}}
       />
      </TouchableOpacity>
-     
+
+     <Text style={{ color: 'black', fontSize: 11, fontStyle:"normal"}}> See more.. </Text>
                             </Text>
                         </View>     
                     )
@@ -54,14 +55,14 @@ const Details = () => {
         container: {
           flex: 1,
           paddingTop: 40,
-          paddingHorizontal: 20,
+          paddingHorizontal: 40,
           width: '100%',  
                 
         },
 
         item: {
             flexDirection: 'row',
-            marginBottom: 20,
+            marginBottom: 30,
             borderRadius: 10,
             backgroundColor: '#fff',
             shadowColor:'#000',
