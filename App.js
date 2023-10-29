@@ -6,6 +6,7 @@ import Signup from './src/Signup';
 //import Login from './src/Login';
 import PresList from './src/PresListView/PresList';
 import DetailBack from './src/PreDetailView/DetailBack';
+import GMapBack from './src/GMapView/GMapBack';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ function App() {
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="PresList" component={PresList} />
         <Stack.Screen name="DetailBack" component={DetailBack} />
+        <Stack.Screen name="GMapBack" component={GMapBack} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -19,7 +19,7 @@ const Details = () => {
 
   // Function to navigate to the target screen when the image is clicked
   const navigateToTargetScreen = () => {
-    navigation.navigate('/'); // Replace 'TargetScreen' with the name of your target screen
+    navigation.navigate('GMapBack'); // Replace 'TargetScreen' with the name of your target screen
   };
 
     
