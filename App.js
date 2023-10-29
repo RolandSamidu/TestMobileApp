@@ -5,6 +5,7 @@ import Home from './src/Home';
 import Signup from './src/Signup';
 //import Login from './src/Login';
 import PresList from './src/PresListView/PresList';
+import DetailBack from './src/PreDetailView/DetailBack';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +16,7 @@ function App() {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="PresList" component={PresList} />
+        <Stack.Screen name="DetailBack" component={DetailBack} />
       </Stack.Navigator>
     </NavigationContainer>
   );

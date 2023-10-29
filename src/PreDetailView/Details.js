@@ -4,12 +4,12 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-const PresBack = () => {
+const Details = () => {
 
       const [people, setPeople] = useState([
-        { name:'\nIssued Date: 20th July 2023                          ', key: '1' },
-        { name:'\nIssued Date: 10th  December 2023                   ', key: '2' },
-        { name:'\nIssued Date: 09th January 2023                        ', key: '3' },
+        { name:'Dogastrol 40mg \n', key: '1' },
+        { name:' Menison 50mg\n', key: '2' },
+        { name:' Dorithricin 100mg\n ', key: '3' },
        
         
       ]);
@@ -19,20 +19,21 @@ const PresBack = () => {
 
   // Function to navigate to the target screen when the image is clicked
   const navigateToTargetScreen = () => {
-    navigation.navigate('DetailBack'); // Replace 'TargetScreen' with the name of your target screen
+    navigation.navigate('/'); // Replace 'TargetScreen' with the name of your target screen
   };
 
     
       return (
         <View style={styles.container}>
-          <Text style={{ color: 'white', fontSize: 20, marginBottom: 40 }}>Prescriptions List</Text>
+          <Text style={{ color: 'white', fontSize: 20, marginBottom: 40 }}>Medicines Lists</Text>
             {   
                 people.map((item) => {
                     return(
                         <View key={item.key}>  
                             <Text style= {styles.item}>
-                            <Text style={{ color: 'black', fontSize: 15, fontStyle:"italic"}}>Doctor Name: Dr. Amal Pepera    </Text>
+                            
                             {item.name}
+                            <Text style={{ color: 'black', fontSize: 11, fontStyle:"normal"}}> Morning 1  | Afternoon 1 | Eveniing 1                  </Text>
                             
                             <TouchableOpacity onPress={navigateToTargetScreen}>
                             <Image
@@ -76,7 +77,7 @@ const PresBack = () => {
             shadowOpacity:.3,
             shadowRadius:30,
             padding:15,
-            fontSize: 12,
+            fontSize: 15,
           },
 
        
@@ -84,4 +85,4 @@ const PresBack = () => {
     
     
 
-export default PresBack;
+export default Details;

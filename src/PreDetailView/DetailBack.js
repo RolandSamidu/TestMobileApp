@@ -1,13 +1,13 @@
 import React from 'react';
 import Background from '../Background';
-import PresBack from './PresBack';
+import Details from './Details';
 
-const PresList = (props) => {
+const DetailBack = (props) => {
   return (
     <Background>
-     <PresBack/>
+     <Details/>
     </Background>
   );
 };
 
-export default PresList;
+export default DetailBack;
