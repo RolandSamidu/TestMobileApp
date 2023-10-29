@@ -6,7 +6,6 @@ const GMapBack = (props) => {
   return (
 
      <GMap/>
-    
   );
 };
 

@@ -7,7 +7,7 @@ import Signup from './src/Signup';
 import PresList from './src/PresListView/PresList';
 import DetailBack from './src/PreDetailView/DetailBack';
 import GMapBack from './src/GMapView/GMapBack';
-
+import PharmacyBack from './src/PhaList/PharmacyBack';
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
         <Stack.Screen name="PresList" component={PresList} />
         <Stack.Screen name="DetailBack" component={DetailBack} />
         <Stack.Screen name="GMapBack" component={GMapBack} />
+        <Stack.Screen name="PharmacyBack" component={PharmacyBack} />
       </Stack.Navigator>
     </NavigationContainer>
   );

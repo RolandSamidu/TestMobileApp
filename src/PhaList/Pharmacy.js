@@ -4,14 +4,11 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-const Details = () => {
+const Pharmacy = () => {
 
       const [people, setPeople] = useState([
         { name:'     Dogastrol   40mg \n\t  ', key: '1' },
-        { name:'   Menison   50mg\n\t', key: '2' },
-        { name:'    Dorithricin   100mg\n\t ', key: '3' },
-       
-        
+      
       ]);
 
 
@@ -25,35 +22,54 @@ const Details = () => {
     
       return (
         <View style={styles.container}>
-          <Text style={{ color: 'white', fontSize: 20, marginBottom: 40 }}>Medicines List</Text>
+          <Text style={{ color: 'white', fontSize: 20, marginBottom: 40 }}>Pharmacies List</Text>
             {   
                 people.map((item) => {
                     return(
                         <View key={item.key}>  
                             <Text style= {styles.item}>
-                            
-                            {item.name}
-                            <Text style={{ color: 'black', fontSize: 11, fontStyle:"italic"}}>Morning 1  | Afternoon 1 | Eveniing 1                  </Text>
-                            
                             <TouchableOpacity onPress={navigateToTargetScreen}>
                             <Image
-        source={require("../assets/med1.png")}
+        source={require("../assets/p2.png")}
         style={{ width: 100, height: 100}}
       />
      </TouchableOpacity>
-
-     <Text style={{fontSize: 11, fontStyle:"italic", color:"blue"}}> See more.. </Text>
+     <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> ____________________________________</Text>
+     <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> Sahana Suwa Pharmacy               </Text>
+     <Text style={{ color: 'black', fontSize: 12 }}>    Email: sahana@gmail.com  | Phone: +94 77 564 7389</Text>
+     <Text style={{ color: 'green', fontSize: 12 }}> Opened                                      </Text>
+     <Image
+        source={require("../assets/rating.png")}
+       
+      />
                             </Text>
                         </View>     
                     )
                     })}
 
-<TouchableOpacity onPress={navigateToTargetScreen}>
+{   
+                people.map((item) => {
+                    return(
+                        <View key={item.key}>  
+                            <Text style= {styles.item}>
+                            <TouchableOpacity onPress={navigateToTargetScreen}>
                             <Image
-        source={require("../assets/findpharmacy.png")}
-        style={{ width: '100%', height: 50, borderRadius: 20}}
+        source={require("../assets/p1.png")}
+        style={{ width: 100, height: 100}}
       />
      </TouchableOpacity>
+     <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> ____________________________________</Text>
+     <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> Osulka Pharmacy Pharmacy               </Text>
+     <Text style={{ color: 'black', fontSize: 12 }}>   Email: osulka@gmail.com  | Phone: +94 76 234 7349   </Text>
+     <Text style={{ color: 'red', fontSize: 12 }}> Closed                                     </Text>
+     <Image
+        source={require("../assets/rating1.png")}
+       
+      />
+                            </Text>
+                        </View>     
+                    )
+                    })}
         </View>
       );
     }
@@ -62,7 +78,7 @@ const Details = () => {
         container: {
           flex: 1,
           paddingTop: 40,
-          paddingHorizontal: 40,
+          paddingHorizontal: 10,
           width: '100%',  
                 
         },
@@ -89,4 +105,4 @@ const Details = () => {
     
     
 
-export default Details;
+export default Pharmacy;

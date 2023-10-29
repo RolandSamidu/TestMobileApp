@@ -1,9 +1,18 @@
 import * as React from "react"
 import MapView, {Callout, Circle, Marker} from 'react-native-maps';
-import { StyleSheet, View, Dimensions, Text } from 'react-native';
-import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete"
+import { StyleSheet, View, Dimensions, Text, TouchableOpacity, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const GMap = () => {
+
+  const navigation = useNavigation();
+
+  // Function to navigate to the target screen when the image is clicked
+  const navigateToTargetScreen = () => {
+    navigation.navigate('PharmacyBack'); // Replace 'TargetScreen' with the name of your target screen
+  };
+
+
   const [ pin, setPin ] = React.useState({
     latitude: 6.914773350285259, // Sri Lanka's latitude
     longitude: 79.97293913083745, // Sri Lanka's longitude
@@ -16,35 +25,12 @@ const GMap = () => {
 	})
 
   return (<View style={{ marginTop: 50, flex: 1 }}>
-    <GooglePlacesAutocomplete
-      placeholder="Search"
-      fetchDetails={true}
-      GooglePlacesSearchQuery={{
-        rankby: "distance"
-      }}
-      onPress={(data, details = null) => {
-        // 'details' is provided when fetchDetails = true
-        console.log(data, details)
-        setRegion({
-          latitude: details.geometry.location.lat,
-          longitude: details.geometry.location.lng,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421, // Zoom level
-        })
-      }}
-      query={{
-        key: "KEY",
-        language: "en",
-        components: "country:us",
-        types: "establishment",
-        radius: 30000,
-        location: `${region.latitude}, ${region.longitude}`
-      }}
-      styles={{
-        container: { flex: 0, position: "absolute", width: "100%", zIndex: 1 },
-        listView: { backgroundColor: "white" }
-      }}
-    />
+   <TouchableOpacity onPress={navigateToTargetScreen}>
+                            <Image
+        source={require("../assets/ph.png")}
+        style={{ width: '100%', height: 50, borderRadius: 20}}
+      />
+     </TouchableOpacity>
     <MapView
       style={styles.map}
       initialRegion={{
@@ -77,7 +63,12 @@ const GMap = () => {
       <Circle center={pin} radius={1000} />
     </MapView>
   </View>
+
+  
 )
+
+
+
 }
 
 const styles = StyleSheet.create({
