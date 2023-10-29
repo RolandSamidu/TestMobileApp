@@ -31,7 +31,7 @@ const PresBack = () => {
                     return(
                         <View key={item.key}>  
                             <Text style= {styles.item}>
-                            <Text style={{ color: 'black', fontSize: 15, fontStyle:"italic"}}>Doctor Name: Dr. Amal Pepera    </Text>
+                            <Text style={{ color: 'black', fontSize: 15, fontStyle:"italic"}}> Dr. Darshana Fernando    </Text>
                             {item.name}
                             
                             <TouchableOpacity onPress={navigateToTargetScreen}>

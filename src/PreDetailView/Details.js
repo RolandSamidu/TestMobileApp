@@ -42,11 +42,18 @@ const Details = () => {
       />
      </TouchableOpacity>
 
-     <Text style={{ color: 'black', fontSize: 11, fontStyle:"normal"}}> See more.. </Text>
+     <Text style={{ color: 'black', fontSize: 11, fontStyle:"italic", color:"blue"}}> See more.. </Text>
                             </Text>
                         </View>     
                     )
                     })}
+
+<TouchableOpacity onPress={navigateToTargetScreen}>
+                            <Image
+        source={require("../assets/findpharmacy.png")}
+        style={{ width: '100%', height: 50, borderRadius: 20}}
+      />
+     </TouchableOpacity>
         </View>
       );
     }
