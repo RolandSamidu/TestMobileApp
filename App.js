@@ -4,7 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/Home';
 import Signup from './src/Signup';
 //import Login from './src/Login';
-import PresList from './src/PresList';
+import PresList from './src/PresListView/PresList';
+
 const Stack = createNativeStackNavigator();
 
 function App() {
