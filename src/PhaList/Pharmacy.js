@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity, Button} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -16,7 +16,7 @@ const Pharmacy = () => {
 
   // Function to navigate to the target screen when the image is clicked
   const navigateToTargetScreen = () => {
-    navigation.navigate('GMapBack'); // Replace 'TargetScreen' with the name of your target screen
+    navigation.navigate('MrdicineBack'); // Replace 'TargetScreen' with the name of your target screen
   };
 
     
@@ -33,6 +33,17 @@ const Pharmacy = () => {
         source={require("../assets/p2.png")}
         style={{ width: 100, height: 100}}
       />
+      
+<Text style={{ color: 'black', fontSize: 10, marginBottom: 20 }}></Text>
+
+<View>
+<TouchableOpacity onPress={navigateToTargetScreen}> 
+      <Button
+        title="+Add Medicines"
+        onPress={(navigateToTargetScreen)}
+      />
+        </TouchableOpacity>
+    </View>
      </TouchableOpacity>
      <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> ____________________________________</Text>
      <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> Sahana Suwa Pharmacy               </Text>
@@ -58,10 +69,17 @@ const Pharmacy = () => {
         style={{ width: 100, height: 100}}
         
       />
-
-      
+           <Text style={{ color: 'black', fontSize: 10, marginBottom: 20 }}></Text>
+<View>
+      <Button
+        title="+Add Medicines"
+        onPress={(navigateToTargetScreen)}
+      />
+    </View>
      </TouchableOpacity>
-  
+
+
+
      <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> ____________________________________</Text>
      <Text style={{ color: 'black', fontSize: 20, marginBottom: 40 }}> Osulka Pharmacy Pharmacy               </Text>
      <Text style={{ color: 'black', fontSize: 12 }}>   Email: osulka@gmail.com  | Phone: +94 76 234 7349   </Text>
@@ -78,6 +96,7 @@ const Pharmacy = () => {
       );
     }
 
+    
     const styles = StyleSheet.create({
         container: {
           flex: 1,
