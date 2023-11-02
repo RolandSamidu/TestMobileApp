@@ -9,7 +9,7 @@ import DetailBack from './src/PreDetailView/DetailBack';
 import GMapBack from './src/GMapView/GMapBack';
 import PharmacyBack from './src/PhaList/PharmacyBack';
 import MrdicineBack from './src/AddMedicine/MrdicineBack'
-import StatusBack from './src/OrderStatus/StatusBack';
+import OrderBack from './src/confirm/OrderBack';
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -23,7 +23,8 @@ function App() {
         <Stack.Screen name="GMapBack" component={GMapBack} />
         <Stack.Screen name="PharmacyBack" component={PharmacyBack} />
         <Stack.Screen name="MrdicineBack" component={MrdicineBack} />
-        <Stack.Screen name="StatusBack" component={StatusBack} />
+       
+        <Stack.Screen name="OrderBack" component={OrderBack} />
       </Stack.Navigator>
     </NavigationContainer>
   );

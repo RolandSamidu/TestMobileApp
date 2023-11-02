@@ -1,13 +1,13 @@
 import React from 'react';
 import Background from '../Background';
-import Status from './Status';
+import Order from './Order';
 
-const StatusBack = (props) => {
+const OrderBack = (props) => {
   return (
     <Background>
-    <Status/>
+   <Order/>
     </Background>
   );
 };
 
-export default StatusBack;
+export default OrderBack;

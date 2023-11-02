@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, navigation } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -18,7 +18,7 @@ const Medicine = () => {
 
   // Function to navigate to the target screen when the image is clicked
   const navigateToTargetScreen = () => {
-    navigation.navigate('DetailBack'); // Replace 'TargetScreen' with the name of your target screen
+    navigation.navigate('OrderBack'); // Replace 'TargetScreen' with the name of your target screen
   };
 
     
@@ -30,9 +30,20 @@ const Medicine = () => {
                     return(
                         <View key={item.key}>  
                             <Text style= {styles.item}>
-                            <Text style={{ color: 'black', fontSize: 15, fontStyle:"italic"}}>NOT COMPLETED</Text>
+                            <Text style={{ color: 'black', fontSize: 15, fontStyle:"italic"}}>NOT COMPLETED YET!</Text>
                           
-     
+                           
+
+
+                            <Text style={{ color: 'black', fontSize: 10, marginBottom: 20 }}>     </Text>
+<View>
+<TouchableOpacity onPress={navigateToTargetScreen}> 
+      <Button
+        title=" Order Process"
+        onPress={(navigateToTargetScreen)}
+      />
+        </TouchableOpacity>
+    </View>
                             </Text>
                         </View>     
                     )
