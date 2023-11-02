@@ -24,7 +24,7 @@ const Medicine = () => {
     
       return (
         <View style={styles.container}>
-          <Text style={{ color: 'white', fontSize: 20, marginBottom: 40 }}>Upload Prescription   </Text>
+          <Text style={{ color: 'white', fontSize: 20, marginBottom: 40 }}>Upload Prescription Lists  </Text>
             {   
                 people.map((item) => {
                     return(

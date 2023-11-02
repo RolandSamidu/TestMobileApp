@@ -18,20 +18,26 @@ const Order = () => {
 
   // Function to navigate to the target screen when the image is clicked
   const navigateToTargetScreen = () => {
-    navigation.navigate('DetailBack'); // Replace 'TargetScreen' with the name of your target screen
+    navigation.navigate('PresList'); // Replace 'TargetScreen' with the name of your target screen
   };
 
     
       return (
         <View style={styles.container}>
-          <Text style={{ color: 'white', fontSize: 20, marginBottom: 40 }}>Confirm Order   </Text>
+          <Text style={{ color: 'white', fontSize: 20, marginBottom: 40 }}>Confirm Order Details  </Text>
             {   
                 people.map((item) => {
                     return(
                         <View key={item.key}>  
                             <Text style= {styles.item}>
-                            <Text style={{ color: 'black', fontSize: 15, fontStyle:"italic"}}>NOT COMPLETED YET!</Text>
-                          
+                            <Text style={{ color: 'black', fontSize: 15, fontStyle:"italic"}}>NOT COMPLETED YET!   </Text>
+                              
+                            <TouchableOpacity onPress={navigateToTargetScreen}>
+                            <Image
+        source={require("../assets/confirm.png")}
+        style={{ width: 40, height: 40}}
+      />
+     </TouchableOpacity>
                             </Text>
                         </View>     
                     )
